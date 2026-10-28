@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Oligonucleotide Regulatory Requirements Graph (data model 0.3)",
+  "type": "object",
+  "required": ["meta", "nodes", "edges"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "version", "license_data", "license_code", "gates", "domains"],
+      "properties": {
+        "title": {"type": "string"},
+        "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "generated": {"type": "string"},
+        "changes": {"type": "string"},
+        "license_data": {"type": "string"},
+        "license_code": {"type": "string"},
+        "disclaimer": {"type": "string"},
+        "node_count": {"type": "integer"},
+        "edge_count": {"type": "integer"},
+        "gates": {"type": "array", "minItems": 8, "maxItems": 8,
+          "items": {"type": "object", "required": ["id", "label", "index"],
+            "properties": {"id": {"type": "string"}, "label": {"type": "string"}, "index": {"type": "integer", "minimum": 0, "maximum": 7}}}},
+        "domains": {"type": "array", "items": {"type": "object", "required": ["id", "label"]}},
+        "groups": {"type": "array", "items": {"type": "object", "required": ["id", "domain", "members"],
+          "properties": {"id": {"type": "string"}, "domain": {"type": "string"}, "members": {"type": "array", "items": {"type": "string"}, "minItems": 2}}}},
+        "triggers": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "key", "label", "kind", "domain", "gate_from", "gate_to", "region", "status", "confidence", "triggers"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "key": {"type": "string", "maxLength": 24, "description": "Short citation key used in figures and the register; unique."},
+          "label": {"type": "string"},
+          "short": {"type": "string"},
+          "kind": {"enum": ["legal_act", "guideline", "pharmacopoeia", "programme", "milestone", "consideration"]},
+          "domain": {"enum": ["quality", "nonclin", "clinical", "paed", "rare", "auth", "spine", "consideration"]},
+          "gate_from": {"type": "integer", "minimum": 0, "maximum": 7},
+          "gate_to": {"type": "integer", "minimum": 0, "maximum": 7},
+          "group": {"type": ["string", "null"], "description": "Series id for figure aggregation; see meta.groups."},
+          "region": {"enum": ["ICH", "EU", "US", "JP", "UK", "INTL"]},
+          "ref": {"type": ["string", "null"]},
+          "date": {"type": ["string", "null"]},
+          "status": {"enum": ["in_force", "draft", "pending", "programme", "guidance", "verify", "superseded"]},
+          "status_note": {"type": ["string", "null"]},
+          "url": {"type": ["string", "null"]},
+          "scope": {"type": "string"},
+          "oligo_note": {"type": "string"},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "verification": {"type": ["string", "null"], "enum": ["page", "search", "secondary", "knowledge", null],
+            "description": "page = official page or PDF opened; search = URL surfaced on the official domain; secondary = a non-official source opened; knowledge = not checked against a live source."},
+          "last_checked": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "modality": {"type": "array", "items": {"enum": ["aso", "sirna", "aptamer", "conjugate", "lnp", "all_oligo"]}},
+          "triggers": {"type": "array", "items": {"enum": ["paed_onc", "aoc", "lnp", "galnac", "intrathecal", "individualised"]}}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "rel"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "rel": {"enum": ["prerequisite_for", "references", "supports", "amends", "addresses", "informs", "supersedes"]}
+        }
+      }
+    },
+    "derived": {
+      "type": "object",
+      "description": "Relations regenerated from node fields on every build; never edited by hand.",
+      "properties": {"applies_at": {"type": "array", "items": {"type": "object", "required": ["source", "target", "rel"]}}}
+    }
+  }
+}

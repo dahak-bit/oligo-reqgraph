@@ -1,0 +1,472 @@
+[
+  {
+    "source": "m-discovery",
+    "target": "m-nonclinical",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-nonclinical",
+    "target": "m-cta-ind",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-cta-ind",
+    "target": "m-phase1",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-phase1",
+    "target": "m-phase2",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-phase2",
+    "target": "m-eop2",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-eop2",
+    "target": "m-phase3",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-phase3",
+    "target": "m-filing",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-filing",
+    "target": "m-approval",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "m-approval",
+    "target": "m-lifecycle",
+    "rel": "prerequisite_for"
+  },
+  {
+    "source": "c-clinpharm",
+    "target": "m-phase1",
+    "rel": "informs"
+  },
+  {
+    "source": "c-hyb-offtarget",
+    "target": "m-discovery",
+    "rel": "informs"
+  },
+  {
+    "source": "c-delivery",
+    "target": "m-discovery",
+    "rel": "informs"
+  },
+  {
+    "source": "pheur-oligo",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "usp-oligo",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ema-oligo-quality",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-individualized-2026",
+    "target": "fda-aso-ind-clin",
+    "rel": "references"
+  },
+  {
+    "source": "eu-pharma-package",
+    "target": "eu-orphan-reg",
+    "rel": "amends"
+  },
+  {
+    "source": "us-bpca",
+    "target": "m-phase3",
+    "rel": "supports"
+  },
+  {
+    "source": "c-immunostim",
+    "target": "m-nonclinical",
+    "rel": "informs"
+  },
+  {
+    "source": "c-thrombocytopenia",
+    "target": "m-phase1",
+    "rel": "informs"
+  },
+  {
+    "source": "c-impurities",
+    "target": "m-filing",
+    "rel": "informs"
+  },
+  {
+    "source": "eu-prime",
+    "target": "m-phase1",
+    "rel": "supports"
+  },
+  {
+    "source": "eu-orphan-reg",
+    "target": "m-discovery",
+    "rel": "supports"
+  },
+  {
+    "source": "us-oda",
+    "target": "m-discovery",
+    "rel": "supports"
+  },
+  {
+    "source": "us-breakthrough",
+    "target": "m-phase2",
+    "rel": "supports"
+  },
+  {
+    "source": "us-fast-track",
+    "target": "m-cta-ind",
+    "rel": "supports"
+  },
+  {
+    "source": "eu-pharma-package",
+    "target": "eu-paed-reg",
+    "rel": "amends"
+  },
+  {
+    "source": "oswg",
+    "target": "c-immunostim",
+    "rel": "addresses"
+  },
+  {
+    "source": "oswg",
+    "target": "c-hyb-offtarget",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-clinpharm",
+    "target": "c-clinpharm",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-clinpharm",
+    "target": "c-thrombocytopenia",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-q3a",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-q11",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-q6a",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-s6r1",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-novel-excipient",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "c-cns-delivery",
+    "target": "m-nonclinical",
+    "rel": "informs"
+  },
+  {
+    "source": "c-hepatotox",
+    "target": "m-nonclinical",
+    "rel": "informs"
+  },
+  {
+    "source": "c-nephro",
+    "target": "m-nonclinical",
+    "rel": "informs"
+  },
+  {
+    "source": "ich-e11a",
+    "target": "eu-pip-guidance",
+    "rel": "references"
+  },
+  {
+    "source": "ich-e11a",
+    "target": "fda-ipsp",
+    "rel": "references"
+  },
+  {
+    "source": "us-race",
+    "target": "fda-paed-target-list",
+    "rel": "references"
+  },
+  {
+    "source": "eu-paed-reg",
+    "target": "eu-pip-guidance",
+    "rel": "references"
+  },
+  {
+    "source": "us-prea",
+    "target": "fda-ipsp",
+    "rel": "references"
+  },
+  {
+    "source": "us-race",
+    "target": "us-rpd-prv",
+    "rel": "references"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "c-immunostim",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "c-hyb-offtarget",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "c-hepatotox",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "c-nephro",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "c-thrombocytopenia",
+    "rel": "addresses"
+  },
+  {
+    "source": "pmda-oligo",
+    "target": "c-hyb-offtarget",
+    "rel": "addresses"
+  },
+  {
+    "source": "pmda-oligo",
+    "target": "c-immunostim",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-nonclin",
+    "target": "oswg",
+    "rel": "references"
+  },
+  {
+    "source": "jp-oligo-quality",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ema-impd-q",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-q3c",
+    "target": "c-impurities",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-adc-clinpharm",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "ema-mab-gl",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-nanomaterials",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-liposome",
+    "target": "c-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-m10",
+    "target": "c-clinpharm",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-e14s7b",
+    "target": "c-clinpharm",
+    "rel": "addresses"
+  },
+  {
+    "source": "ich-e14s7b",
+    "target": "ich-s7b",
+    "rel": "references"
+  },
+  {
+    "source": "fda-oligo-clinpharm",
+    "target": "ich-e14s7b",
+    "rel": "references"
+  },
+  {
+    "source": "ich-q14",
+    "target": "ich-q2r2",
+    "rel": "references"
+  },
+  {
+    "source": "fda-fdara-pedonc",
+    "target": "us-race",
+    "rel": "references"
+  },
+  {
+    "source": "fda-fdara-pedonc",
+    "target": "fda-paed-target-list",
+    "rel": "references"
+  },
+  {
+    "source": "fda-individualized-2026",
+    "target": "fda-aso-nonclin",
+    "rel": "references"
+  },
+  {
+    "source": "fda-individualized-2026",
+    "target": "fda-aso-admin",
+    "rel": "references"
+  },
+  {
+    "source": "fda-rdep",
+    "target": "m-filing",
+    "rel": "supports"
+  },
+  {
+    "source": "fda-rare-dis",
+    "target": "us-oda",
+    "rel": "references"
+  },
+  {
+    "source": "eu-camp",
+    "target": "eu-reg-726",
+    "rel": "references"
+  },
+  {
+    "source": "eu-accelerated",
+    "target": "eu-reg-726",
+    "rel": "references"
+  },
+  {
+    "source": "eu-pharma-package",
+    "target": "eu-reg-726",
+    "rel": "amends"
+  },
+  {
+    "source": "fda-sponsor-inv-ind",
+    "target": "us-ind",
+    "rel": "references"
+  },
+  {
+    "source": "cns-goyenvalle-2023",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "cns-berman-booty-2023",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "cns-ijt-2020",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "cns-toxpath-nfd",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "cns-goyenvalle-2023",
+    "target": "c-hepatotox",
+    "rel": "addresses"
+  },
+  {
+    "source": "cns-goyenvalle-2023",
+    "target": "c-immunostim",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-dili-2009",
+    "target": "c-hepatotox",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-renal-pk-2024",
+    "target": "c-nephro",
+    "rel": "addresses"
+  },
+  {
+    "source": "fda-oligo-clinpharm",
+    "target": "fda-renal-pk-2024",
+    "rel": "references"
+  },
+  {
+    "source": "fda-oligo-clinpharm",
+    "target": "fda-dili-2009",
+    "rel": "references"
+  },
+  {
+    "source": "ich-q1",
+    "target": "ich-q1ar2",
+    "rel": "supersedes"
+  },
+  {
+    "source": "ich-e6r3",
+    "target": "ich-e6r2",
+    "rel": "supersedes"
+  },
+  {
+    "source": "ich-e9r1",
+    "target": "ich-e9",
+    "rel": "amends"
+  },
+  {
+    "source": "us-accel-approval",
+    "target": "fda-expedited-2014",
+    "rel": "supersedes"
+  },
+  {
+    "source": "us-breakthrough",
+    "target": "fda-expedited-2014",
+    "rel": "references"
+  },
+  {
+    "source": "us-fast-track",
+    "target": "fda-expedited-2014",
+    "rel": "references"
+  },
+  {
+    "source": "ema-ddc-gl",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "us-21cfr4",
+    "target": "c-cns-delivery",
+    "rel": "addresses"
+  },
+  {
+    "source": "ema-ddc-gl",
+    "target": "c-delivery",
+    "rel": "addresses"
+  }
+]
