@@ -1,0 +1,31 @@
+name: Document correction
+description: Correct the reference, status, date, URL or placement of one document.
+title: "[doc] <key>: <what is wrong>"
+labels: [correction]
+body:
+  - type: input
+    id: key
+    attributes: { label: Document key (as shown in Figure 1 / Table 1), placeholder: "ICH S9 (oncology)" }
+    validations: { required: true }
+  - type: dropdown
+    id: field
+    attributes:
+      label: What needs correcting
+      options: [Official URL, Document number / reference, Date, Status (draft / in force / superseded …), Gate span (applies from … to …), Domain, Programme-type trigger, Something else]
+    validations: { required: true }
+  - type: textarea
+    id: correct
+    attributes: { label: Correct value, description: Quote the official text where possible. }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: Official source URL you checked }
+    validations: { required: true }
+  - type: input
+    id: checked
+    attributes: { label: Date you checked it (YYYY-MM-DD) }
+    validations: { required: true }
+  - type: dropdown
+    id: opened
+    attributes: { label: Did you open the page or PDF?, options: [Yes — opened, No — located only] }
+    validations: { required: true }
