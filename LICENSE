@@ -1,17 +1,22 @@
 Oligonucleotide Regulatory Requirements Graph
+Copyright (c) 2026 [Your name] (ORCID 0000-0003-3368-0121)
 
-DATA LICENCE — applies to graph.json, nodes.json, edges.json, nodes.csv, edges.csv, schema.json
+DATA LICENCE — applies to graph.json, nodes.json, edges.json, nodes.csv,
+edges.csv, schema.json, source-inventory.json and figure1.svg
 
   Creative Commons Attribution 4.0 International (CC BY 4.0)
   https://creativecommons.org/licenses/by/4.0/
 
   You may share and adapt the data for any purpose, including commercially,
-  provided you give appropriate credit, link to the licence, and indicate
-  if changes were made.
+  provided you give appropriate credit (see CITATION.cff), link to the
+  licence, and indicate if changes were made.
 
-CODE LICENCE — applies to the viewer logic in index.html
+CODE LICENCE — applies to build.py, build_page.py, validate.py, the workflow
+and issue-template files under .github/, and the page logic in index.html
 
   MIT License
+
+  Copyright (c) 2026 [Your name]
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +36,19 @@ CODE LICENCE — applies to the viewer logic in index.html
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
 
-The viewer loads d3 (ISC licence) from cdnjs at runtime.
+THIRD-PARTY SOFTWARE
+
+  The page loads d3 v7.9.0 (ISC licence, Mike Bostock) from cdnjs at runtime.
+  Google Fonts (Source Serif 4, SIL Open Font License 1.1) is referenced at
+  runtime; no font files are redistributed.
+
+NO ENDORSEMENT
+
+  The regulatory documents referenced in the data remain the property of their
+  issuing bodies (ICH, EMA, European Commission, FDA, US Congress, MHLW/PMDA,
+  MHRA, UK Parliament, EDQM, USP, OSWG and others). This project reproduces
+  titles, document numbers, dates and URLs only. No endorsement by any
+  issuing body is implied.
 
 DISCLAIMER
 
