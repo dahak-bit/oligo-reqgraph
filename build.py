@@ -6,7 +6,7 @@ verified inventory produced by the research pass.
 """
 import json, csv, sys, os
 
-OUT = os.path.join(os.path.dirname(__file__), "pkg")
+OUT = os.path.dirname(os.path.abspath(__file__))  # package layout: outputs sit next to this script
 
 # region: ICH | EU | US | JP | UK | INTL
 # kind:   legal_act | guideline | pharmacopoeia | programme | milestone | consideration
@@ -389,7 +389,7 @@ edge("ich-s9","m-nonclinical","governs_phase")
 # Pulls verified fields from the research inventory (inventory/inventory.json).
 # Mapping: graph node id -> inventory id. Fields taken: ref (document_number),
 # date, status_note (full status text), confidence, verification provenance, url.
-INV_PATH = os.path.join(os.path.dirname(__file__), "inventory", "inventory.json")
+INV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "source-inventory.json")
 INV = {e["id"]: e for e in json.load(open(INV_PATH))}
 
 def _prov(v):
@@ -867,7 +867,7 @@ os.makedirs(OUT, exist_ok=True)
 with open(os.path.join(OUT,"nodes.json"),"w") as f: json.dump(N,f,indent=2,ensure_ascii=False)
 with open(os.path.join(OUT,"edges.json"),"w") as f: json.dump(E,f,indent=2,ensure_ascii=False)
 graph = {"meta":{"title":"Oligonucleotide Regulatory Requirements Graph",
-                 "version":"0.3.1","generated":"2026-10-28",
+                 "version":"0.4.0","data_model":"0.3","generated":"2026-10-28",
                  "gates":[{"id":g,"label":l,"index":i} for i,(g,l) in enumerate(GATES)],
                  "domains":[{"id":d,"label":l} for d,l in DOMAINS],
                  "groups":[{"id":gid,"domain":dom,"members":m} for gid,dom,m in GROUPS],

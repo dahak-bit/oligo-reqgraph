@@ -5,7 +5,16 @@ regulatory programmes apply to oligonucleotide therapeutics (ASO, siRNA, aptamer
 GalNAc/antibody/LNP-delivered oligos) along the development path from discovery to
 post-approval. Coverage: ICH, EU, US, Japan, UK, plus field-level consensus (OSWG).
 
-Version 0.3.1 · 104 nodes · 94 semantic relations + 292 derived gate links · generated 2026-10-28
+Release 0.4.0 (data model 0.3) · 104 nodes · 94 semantic relations + 292 derived gate links · generated 2026-10-28
+
+**Changes in 0.4.0 (Phase C, page only — data unchanged):** the explorer and the map are one
+page, `index.html`, with four views (Map, Explore, Register, Notes) behind one filter panel; the
+active view is in the URL hash (`#map`, `#explore`, `#register`, `#notes`). Built-in filter presets
+per programme type, user-saved presets (browser local storage), sortable register with CSV export
+of the filtered rows, theme-resolved SVG export, an A4 print stylesheet (Figure 1 split at lane
+boundaries onto landscape pages; Panel 1 and Table 1 portrait), keyboard access to bars and keys,
+and a colour-vision check of the palette with non-colour status cues (every status has a distinct
+outline pattern or shape). `figure.html` and the old explorer are retired.
 
 **Changes in 0.3.0 (data model 0.3):** every node now carries `domain`, `gate_from`/`gate_to`
 on an eight-gate scale, a unique citation `key`, an optional `group` (series aggregation for
@@ -38,9 +47,10 @@ Added `status_note` and `verification` fields.
 | `nodes.json` / `edges.json` | Same data, split |
 | `nodes.csv` / `edges.csv` | Flat tables for spreadsheets, R, pandas |
 | `schema.json` | JSON Schema (draft-07) for `graph.json` |
-| `index.html` | Explorer (d3 force graph, self-contained, data embedded) |
-| `figure.html` / `figure1.svg` | Journal-style map (Figure 1, Panel 1, Table 1, scope, audit, roadmap) and its standalone SVG |
-| `build_figure.py` | Generates `figure.html` and `figure1.svg` from `graph.json` |
+| `index.html` | The page: Map (Figure 1, Panel 1), Explore (d3 force graph), Register (Table 1), About (scope, how to read the fields, how to use the page). Self-contained, data embedded; d3 is loaded from cdnjs for the Explore view only. |
+| `figure1.svg` | Standalone Figure 1 (light theme, links kept) for manuscripts |
+| `build.py` | Builds `graph.json`, `nodes.*`, `edges.*` from the source definitions |
+| `build_page.py` | Generates `index.html` and `figure1.svg` from `graph.json` |
 | `validate.py` | Schema, integrity, key/span/group checks; `--links` writes `link-report.json` |
 | `.github/workflows/validate.yml` | Runs validation on every change and the link check quarterly |
 | `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/` | How to propose corrections and additions |
@@ -112,6 +122,14 @@ G.add_edges_from((e["source"], e["target"], {"rel": e["rel"]}) for e in g["edges
 [n["key"] for n in g["nodes"] if n["domain"] not in ("spine","consideration") and n["gate_from"] <= 1 <= n["gate_to"]]
 ```
 
+## Using the page
+
+- **Filters** apply to all views. *Dim* keeps non-matching documents at low opacity; *Hide* removes them, turns a programme-type selection into a filter, and closes up empty rows and lanes.
+- **Presets**: one built-in preset per programme type (jurisdictions, gate range, programme type, Hide). *Save as preset* stores the current filters for the selected programme type in this browser only; *Built-in presets* forgets saved ones.
+- **Export**: *Copy SVG* (current theme and filter state), *Copy CSV* (register rows currently shown, all data fields), *Copy JSON* (the whole graph). *Print* renders Figure 1, Panel 1 and the filtered Table 1 on A4.
+- **Keyboard**: Tab moves between bars in Figure 1, ←/→ between keys of a series bar, Enter opens the detail sheet, Esc closes it; ←/→ also move between the view tabs.
+- **Links**: `index.html#register` opens the register; `#open` jumps to the open items.
+
 ## Contributing
 
 See `CONTRIBUTING.md` and the issue templates under `.github/ISSUE_TEMPLATE/`.
@@ -122,5 +140,5 @@ Node ids are stable; do not rename them, add new ones instead.
 
 ## Licence
 
-Data (`*.json`, `*.csv`): CC BY 4.0. Code (`index.html` viewer logic): MIT.
+Data (`*.json`, `*.csv`): CC BY 4.0. Code (`build.py`, `build_page.py`, `validate.py`, the page logic in `index.html`): MIT.
 See `LICENSE`. Please cite using `CITATION.cff`.
