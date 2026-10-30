@@ -5,6 +5,8 @@
     "data_model": "0.3",
     "generated": "2026-10-30",
     "doi": "10.5281/zenodo.23818609",
+    "url": "https://dahak-bit.github.io/oligo-reqgraph/",
+    "repository": "https://github.com/dahak-bit/oligo-reqgraph",
     "doi_versions": {
       "0.4.0": "10.5281/zenodo.23818610"
     },

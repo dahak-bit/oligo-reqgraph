@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23818609.svg)](https://doi.org/10.5281/zenodo.23818609)
 
+**Open the map:** https://dahak-bit.github.io/oligo-reqgraph/
+
 An open, machine-readable map of which laws, guidelines, pharmacopoeial texts and
 regulatory programmes apply to oligonucleotide therapeutics (ASO, siRNA, aptamers,
 GalNAc/antibody/LNP-delivered oligos) along the development path from discovery to
@@ -144,7 +146,7 @@ Node ids are stable; do not rename them, add new ones instead.
 
 ## How to cite
 
-> Hakimeh, Dani. *Oligonucleotide Regulatory Requirements Graph* (v0.4.2). Zenodo, 2026. https://doi.org/10.5281/zenodo.23818609
+> [Family name], [Given name]. *Oligonucleotide Regulatory Requirements Graph* (v0.4.2). Zenodo, 2026. https://doi.org/10.5281/zenodo.23818609
 
 This concept DOI always resolves to the latest release. To cite a specific release, use its version DOI (v0.4.0: https://doi.org/10.5281/zenodo.23818610); each later release gets its own version DOI on Zenodo. GitHub shows the citation under “Cite this repository” (from `CITATION.cff`).
 
