@@ -541,7 +541,7 @@ dialog textarea{width:100%;min-height:220px;font-family:var(--mono);font-size:11
 </style>
 <div class="wrap">
 <h1>Regulatory requirements for oligonucleotide therapeutics</h1>
-<p class="byline">Development map · ICH, EU, US, Japan, UK · data model %%DM%%, release v%%VER%%, %%GEN%% · %%NDOC%% documents, %%NCON%% oligonucleotide-specific considerations</p>
+<p class="byline">Development map · ICH, EU, US, Japan, UK · data model %%DM%%, release v%%VER%%, %%GEN%% · %%NDOC%% documents, %%NCON%% oligonucleotide-specific considerations · <a href="https://doi.org/%%DOI%%">doi:%%DOI%%</a></p>
 
 <div class="tabs" role="tablist" aria-label="Views">
   <button class="tab" role="tab" id="tab-map" aria-controls="view-map" aria-selected="true" data-view="map">Map</button>
@@ -611,7 +611,7 @@ dialog textarea{width:100%;min-height:220px;font-family:var(--mono);font-size:11
 %%NOTES%%
 </section>
 
-<p class="note">%%DISCLAIMER%% Data: CC BY 4.0, code: MIT. Layout generated deterministically from the graph data; the same input always yields the same figure.</p>
+<p class="note">%%DISCLAIMER%% Cite as: Oligonucleotide Regulatory Requirements Graph, release v%%VER%%. Zenodo. <a href="https://doi.org/%%DOI%%">https://doi.org/%%DOI%%</a>. Data: CC BY 4.0, code: MIT. Layout generated deterministically from the graph data; the same input always yields the same figure.</p>
 </div>
 <aside class="sheet" id="sheet" aria-live="polite"></aside>
 <dialog id="dlg"><p id="dlgMsg">Clipboard access was refused. Select the text and copy it.</p><textarea id="dlgTxt" readonly></textarea><form method="dialog" style="margin-top:8px;text-align:right"><button class="tbtn">Close</button></form></dialog>
@@ -917,7 +917,7 @@ SVGCSS='''.spine{stroke:var(--rule);stroke-width:1.2;fill:none}.grid{stroke:var(
 .r-ICH{fill:var(--r-ICH)}.r-EU{fill:var(--r-EU)}.r-US{fill:var(--r-US)}.r-JP{fill:var(--r-JP)}.r-UK{fill:var(--r-UK)}.r-INTL{fill:var(--r-INTL)}
 .key{font-size:9.5px;fill:var(--ink)}.reg{font-size:8px;font-weight:700;letter-spacing:.04em}.sep{fill:var(--ink3)}text{font-family:Helvetica,Arial,sans-serif}.k[data-status="verify"]{fill:var(--st-verify-b)}
 .lo{opacity:.22}.hi .chip{stroke:var(--accent);stroke-width:2}.st-superseded .k{text-decoration:line-through}'''
-REPL={"%%DM%%":g["meta"].get("data_model","0.3"),"%%VER%%":g["meta"]["version"],"%%GEN%%":g["meta"]["generated"],"%%NDOC%%":str(len(docs)),"%%NCON%%":str(len(cons)),
+REPL={"%%DOI%%":g["meta"].get("doi",""),"%%DM%%":g["meta"].get("data_model","0.3"),"%%VER%%":g["meta"]["version"],"%%GEN%%":g["meta"]["generated"],"%%NDOC%%":str(len(docs)),"%%NCON%%":str(len(cons)),
  "%%F_REGION%%":F_REGION,"%%F_STATUS%%":F_STATUS,"%%F_DOMAIN%%":F_DOMAIN,"%%F_VERIF%%":F_VERIF,"%%GATE_OPTS%%":GATE_OPTS,"%%OVBTN%%":OVBTN,"%%PRESET_OPTS%%":PRESET_OPTS,
  "%%SVG%%":SVG,"%%LEGEND_STATUS%%":LEGEND_STATUS,"%%PANEL%%":PANEL,"%%THEAD%%":THEAD,"%%TABLE%%":TABLE,"%%NOTES%%":(SCOPE+HOWTO+CHANGES+A11Y+AUDIT+ROADMAP+OPEN) if INTERNAL else (SCOPE+HOWTO),"%%NOTESTAB%%":"Notes" if INTERNAL else "About",
  "%%DISCLAIMER%%":esc(g["meta"]["disclaimer"]),"%%GRAPHJSON%%":GRAPHJSON,"%%OVJSON%%":OVJSON,"%%PRJSON%%":PRJSON,"%%NG%%":str(len(GATES)),"%%CH%%":str(CH),"%%CGAP%%":str(CGAP),"%%PAD%%":str(LANEPAD),"%%TOP%%":str(TOP),

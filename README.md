@@ -1,11 +1,15 @@
 # Oligonucleotide Regulatory Requirements Graph (oligo reqgraph)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23818609.svg)](https://doi.org/10.5281/zenodo.23818609)
+
 An open, machine-readable map of which laws, guidelines, pharmacopoeial texts and
 regulatory programmes apply to oligonucleotide therapeutics (ASO, siRNA, aptamers,
 GalNAc/antibody/LNP-delivered oligos) along the development path from discovery to
 post-approval. Coverage: ICH, EU, US, Japan, UK, plus field-level consensus (OSWG).
 
-Release 0.4.0 (data model 0.3) · 104 nodes · 94 semantic relations + 292 derived gate links · generated 2026-10-28
+Release 0.4.2 (data model 0.3) · 104 nodes · 94 semantic relations + 292 derived gate links · generated 2026-10-30
+
+**Changes in 0.4.1–0.4.2:** Zenodo DOI added to CITATION.cff, README, `graph.json` (`meta.doi`) and the page (byline and citation line); LICENSE names the copyright holder and covers all code and data files.
 
 **Changes in 0.4.0 (Phase C, page only — data unchanged):** the explorer and the map are one
 page, `index.html`, with four views (Map, Explore, Register, Notes) behind one filter panel; the
@@ -137,6 +141,12 @@ See `CONTRIBUTING.md` and the issue templates under `.github/ISSUE_TEMPLATE/`.
 Corrections are most valuable for nodes with `confidence` below `high`. For each
 correction, give the official URL, document number, date and current status.
 Node ids are stable; do not rename them, add new ones instead.
+
+## How to cite
+
+> [Family name], [Given name]. *Oligonucleotide Regulatory Requirements Graph* (v0.4.2). Zenodo, 2026. https://doi.org/10.5281/zenodo.23818609
+
+This concept DOI always resolves to the latest release. To cite a specific release, use its version DOI (v0.4.0: https://doi.org/10.5281/zenodo.23818610); each later release gets its own version DOI on Zenodo. GitHub shows the citation under “Cite this repository” (from `CITATION.cff`).
 
 ## Licence
 

@@ -867,7 +867,7 @@ os.makedirs(OUT, exist_ok=True)
 with open(os.path.join(OUT,"nodes.json"),"w") as f: json.dump(N,f,indent=2,ensure_ascii=False)
 with open(os.path.join(OUT,"edges.json"),"w") as f: json.dump(E,f,indent=2,ensure_ascii=False)
 graph = {"meta":{"title":"Oligonucleotide Regulatory Requirements Graph",
-                 "version":"0.4.0","data_model":"0.3","generated":"2026-10-28",
+                 "version":"0.4.2","data_model":"0.3","generated":"2026-10-30","doi":"10.5281/zenodo.23818609","doi_versions":{"0.4.0":"10.5281/zenodo.23818610"},
                  "gates":[{"id":g,"label":l,"index":i} for i,(g,l) in enumerate(GATES)],
                  "domains":[{"id":d,"label":l} for d,l in DOMAINS],
                  "groups":[{"id":gid,"domain":dom,"members":m} for gid,dom,m in GROUPS],
