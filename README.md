@@ -144,7 +144,7 @@ Node ids are stable; do not rename them, add new ones instead.
 
 ## How to cite
 
-> [Family name], [Given name]. *Oligonucleotide Regulatory Requirements Graph* (v0.4.2). Zenodo, 2026. https://doi.org/10.5281/zenodo.23818609
+> Hakimeh, Dani. *Oligonucleotide Regulatory Requirements Graph* (v0.4.2). Zenodo, 2026. https://doi.org/10.5281/zenodo.23818609
 
 This concept DOI always resolves to the latest release. To cite a specific release, use its version DOI (v0.4.0: https://doi.org/10.5281/zenodo.23818610); each later release gets its own version DOI on Zenodo. GitHub shows the citation under “Cite this repository” (from `CITATION.cff`).
 
