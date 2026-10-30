@@ -1,5 +1,5 @@
 Oligonucleotide Regulatory Requirements Graph
-Copyright (c) 2026 [Your name] (ORCID 0000-0003-3368-0121)
+Copyright (c) 2026 Dani Hakimeh (ORCID 0000-0003-3368-0121)
 
 DATA LICENCE — applies to graph.json, nodes.json, edges.json, nodes.csv,
 edges.csv, schema.json, source-inventory.json and figure1.svg
@@ -16,7 +16,7 @@ and issue-template files under .github/, and the page logic in index.html
 
   MIT License
 
-  Copyright (c) 2026 [Your name]
+  Copyright (c) 2026 Dani Hakimeh
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
